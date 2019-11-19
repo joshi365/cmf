@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {getCurrentProfile} from '../store/actions/profile';
+import {deleteFriend} from '../store/actions/profile'
 import {connect} from 'react-redux';
-import isEmpty from '../store/validation/isEmpty'
+import isEmpty from '../store/validation/isEmpty';
+import {Link} from 'react-router-dom';
 
 
 class FriendList extends Component {
@@ -9,7 +11,11 @@ class FriendList extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          getAllFriends: []
+          getAllFriends: [],
+          Name:'',
+          MobileNumber:'',
+          FavouriteGame:'',
+          DOB:''
       }
   }
 
@@ -17,8 +23,20 @@ class FriendList extends Component {
         this.props.getCurrentProfile();
     }
 
+    delete = (id) => e => {
+        e.preventDefault();
+        // console.log(id);
+        this.props.deleteFriend(id);
+    }
+
+    onClickHandler  = (data) => e => {
+        e.preventDefault();
+        console.log(data)
+
+    }
+
     static getDerivedStateFromProps(nextprops,nextstate) {
-        console.log(nextprops.profile.profile.friends);
+        // console.log(nextprops.profile.profile.friends);
         if(nextprops.profile !== nextstate.getAllFriends) {
             return{
                getAllFriends: nextprops.profile.profile.friends
@@ -39,12 +57,17 @@ class FriendList extends Component {
             <h5>{index}</h5>
                 </div>
 
-            <div className= 'col-6'>
+            <div className= 'col-5'>
                 <h5>{friends.Name}</h5>
             </div>
 
             <div className='col-3'>
-                <h4>x</h4>
+                <h4 onClick={this.delete(friends._id)}>x</h4>
+            </div>
+            <div className='col-1'>
+                <Link>
+                <h4 onClick={this.onClickHandler(friends)}>edit</h4>
+                </Link>
             </div>
             </div>
             ))}
@@ -56,10 +79,33 @@ class FriendList extends Component {
         return (
             <div>
                 <React.Fragment>
-                    <div>
-                        {this.renderList()}
-                    </div>
-                </React.Fragment>
+            <div className='friendList-main'>
+                <div className='friends-List-heading'>
+                <div className='joint-text'>
+                <h3>Welcome To</h3> <h2>Friends App</h2>
+                </div>
+                </div>
+        
+                <div className='container sno-name-delete-row'>
+                <div className="row">
+                <div className="col-3"><p>Sno</p></div>
+                <div className="col-5"><p>Friends Name</p></div>
+                <div className="col-3"><p>Delete</p></div>
+                <div className="col-1"><p>Edit</p></div>
+        
+              </div>
+              {this.renderList()}
+                </div>
+
+                <div className='add-friend-link'>
+                </div> 
+
+            </div>
+
+          </React.Fragment>
+
+          <div><Link to ='/addafriend'><p>add a friend</p></Link></div>
+          
             </div>
         );
     }
@@ -70,5 +116,5 @@ const mapStateToProps = state => ({
 })
 
 export default connect ( mapStateToProps,
-     {getCurrentProfile} 
+     {getCurrentProfile,deleteFriend} 
      )(FriendList);
