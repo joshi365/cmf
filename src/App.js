@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import SignUp from './Components/SignUp';
-import Login from './Components/Login'
+import Login from './Components/Login';
+import FriendList from './Components/FriendList'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 //REDUX//
@@ -15,6 +16,7 @@ function App() {
     <Switch> 
       <Route exact path='/' component={SignUp}/>
       <Route exact path='/login' component={Login}/>
+      <Route exact path='/friendlist' component={FriendList}/>
     </Switch>
     </Router>
     </Provider>
