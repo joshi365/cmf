@@ -1,0 +1,52 @@
+.friendList-main{
+    .friends-List-heading{
+        background-color: #2699FB;
+        height: vw(100px);
+        h1{
+            font-size: vw(40px);
+            font-family: AvenirLTStd-Book;
+            color: #FFFFFF;
+            padding-top: vw(30px);
+            margin-left: vw(20px);
+    
+            span{
+                font-size: vw(40px);
+                font-family: AvenirLTStd-Black;
+            }
+        }
+    }
+
+    .sno-name-delete-row{
+        margin-top: vw(90px);
+
+        p{
+            font-size: vw(30px);
+            color: #2699FB;
+            font-family: AvenirLTStd-Heavy;
+        }
+    }
+
+    
+}
+
+.add-friend-button{
+
+    height: vw(161px);
+    margin-top: vw(268px);
+    background-color:#2699FB ;
+    button{
+        width: vw(327px);
+        height: vw(62px);
+        border-radius: vw(20px);
+        border: 2px solid #FFFFFF;
+        font-size: vw(20px);
+        color: #FFFFFF;
+        background-color: #2699FB;
+        font-family: AvenirLTStd-Book;
+        margin-top: vw(40px);
+
+        span{
+            margin-left: vw(80px);
+        }
+}
+}

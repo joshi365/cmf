@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {friendAdd,getCurrentProfile} from '../store/actions/profile'
-
+import {Link} from 'react-router-dom';
 
 class AddAFriend extends Component {
 
@@ -37,28 +37,42 @@ class AddAFriend extends Component {
 
     render() {
         return (
-        <div className='container'>
+        <div className='add-a-friend-main'>
             <form onSubmit={this.onHandleSubmit}>
-           <div className="row">
+            <div className='add-friend-heading'>
+                   <h1>Welcome to <span>Friends App</span></h1>
+               </div>
+           <div className="row name-mobile-field">
             <div className="col-6">
-                name : <input name='Name' value={this.state.Name} onChange={this.onChangeEvent} placeholder='enter-name'></input>
+                <p>Friend's Name</p>
+                 <input name='Name' value={this.state.Name} onChange={this.onChangeEvent} placeholder='enter-name'></input>
             </div>
             <div className="col-6">
-                Mobile Number : <input name='MobileNumber' value={this.state.MobileNumber} onChange={this.onChangeEvent} placeholder='Mobile-Number'></input>
+                <p>Phone Number</p>
+                 <input name='MobileNumber' value={this.state.MobileNumber} onChange={this.onChangeEvent} placeholder='Mobile-Number'></input>
             </div>
             </div>
 
-            <div className="row">
+            <div className="row dob-game-field">
             <div className="col-6">
-                Birthday : <input name='DOB' type='date'  value={this.state.DOB} onChange={this.onChangeEvent} placeholder='Birthday'></input>
+                <p>Friends's Birthday</p>
+                <input name='DOB' type='date'  value={this.state.DOB} onChange={this.onChangeEvent} placeholder='Birthday'></input>
             </div>
             <div className="col-6">
-                Favourite game : <input name='FavouriteGame' value={this.state.FavouriteGame} onChange={this.onChangeEvent} placeholder='favourite game'></input>
+                <p>Friend Favourite Game</p>
+                 <input name='FavouriteGame' value={this.state.FavouriteGame} onChange={this.onChangeEvent} placeholder='favourite game'></input>
             </div>
             </div>
-
-            <button type='submit'>Add Friend</button>
+            <div className='row button-fields'>
+                <div className='col-6 back-button'>
+                    <Link to='/friendlist'><button>{"<-"}<span>Back</span></button></Link>
+                </div>
+                <div className='col-6 add-button'>
+                    <button type='submit'>Add Friend<span>-></span></button>
+                </div>
+            </div>
             </form>
+            
 
         </div>
         );

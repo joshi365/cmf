@@ -1,0 +1,421 @@
+/********************
+    Function Css
+********************/
+/********************
+    Global Css
+********************/
+/***********************************
+            Global Reset             
+***********************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+/********************
+    Typography scss
+********************/
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("./assets/fonts/AvenirLTStd-Black.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-BlackOblique;
+  src: url("./assets/fonts/AvenirLTStd-BlackOblique.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Book;
+  src: url("./assets/fonts/AvenirLTStd-Book.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-BookOblique;
+  src: url("./assets/fonts/AvenirLTStd-BookOblique.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("./assets/fonts/AvenirLTStd-Heavy.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-HeavyOblique;
+  src: url("./assets/fonts/AvenirLTStd-HeavyOblique.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("./assets/fonts/AvenirLTStd-Light.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-LightOblique;
+  src: url("./assets/fonts/AvenirLTStd-LightOblique.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Medium;
+  src: url("./assets/fonts/AvenirLTStd-Medium.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-MediumOblique;
+  src: url("./assets/fonts/AvenirLTStd-MediumOblique.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Oblique;
+  src: url("./assets/fonts/AvenirLTStd-Oblique.otf");
+}
+
+@font-face {
+  font-family: AvenirLTStd-Roman;
+  src: url("./assets/fonts/AvenirLTStd-Roman.otf");
+}
+
+.welcome-page-main {
+  background-color: #2699FB;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.welcome-page-main .Welcome-header-class {
+  padding-top: 15.9375vw;
+}
+
+.welcome-page-main .Welcome-header-class h1 {
+  font-size: 2.08333vw;
+  font-family: AvenirLTStd-Book;
+  color: #FFFFFF;
+}
+
+.welcome-page-main .Welcome-header-class h1 span {
+  font-size: 2.08333vw;
+  font-family: AvenirLTStd-Black;
+}
+
+.welcome-page-main .route-button {
+  margin-top: 8.4375vw;
+}
+
+.welcome-page-main .route-button button {
+  width: 17.03125vw;
+  height: 3.22917vw;
+  border-radius: 1.04167vw;
+  border: 2px solid #FFFFFF;
+  font-size: 1.04167vw;
+  color: #FFFFFF;
+  background-color: #2699FB;
+  font-family: AvenirLTStd-Book;
+}
+
+.welcome-page-main .route-button button span {
+  margin-left: 4.16667vw;
+}
+
+.signup-form {
+  background-color: #2699FB;
+  height: 100vh;
+}
+
+.signup-form .welcome-page-heading {
+  padding-top: 2.5vw;
+  margin-left: 4.16667vw;
+}
+
+.signup-form .welcome-page-heading h1 {
+  font-size: 2.08333vw;
+  font-family: AvenirLTStd-Book;
+  color: #FFFFFF;
+}
+
+.signup-form .welcome-page-heading h1 span {
+  font-size: 2.08333vw;
+  font-family: AvenirLTStd-Black;
+}
+
+.signup-form .all-form-fields {
+  text-align: center;
+}
+
+.signup-form .all-form-fields h2 {
+  font-size: 1.5625vw;
+  font-family: AvenirLTStd-Book;
+  color: #FFFFFF;
+  margin-bottom: 2.1875vw;
+}
+
+.signup-form .all-form-fields ::-webkit-input-placeholder {
+  font-family: AvenirLTStd-Heavy;
+  font-size: 1.04167vw;
+  color: #FFFFFF;
+  padding-left: 1.04167vw;
+}
+
+.signup-form .all-form-fields :-ms-input-placeholder {
+  font-family: AvenirLTStd-Heavy;
+  font-size: 1.04167vw;
+  color: #FFFFFF;
+  padding-left: 1.04167vw;
+}
+
+.signup-form .all-form-fields ::-ms-input-placeholder {
+  font-family: AvenirLTStd-Heavy;
+  font-size: 1.04167vw;
+  color: #FFFFFF;
+  padding-left: 1.04167vw;
+}
+
+.signup-form .all-form-fields ::placeholder {
+  font-family: AvenirLTStd-Heavy;
+  font-size: 1.04167vw;
+  color: #FFFFFF;
+  padding-left: 1.04167vw;
+}
+
+.signup-form .all-form-fields input {
+  width: 27.29167vw;
+  height: 3.95833vw;
+  border-radius: 2.08333vw;
+  background-color: #2699FB;
+  border: 2px solid #FFFFFF;
+  margin-bottom: 1.5625vw;
+  outline: none;
+}
+
+.signup-form .all-form-fields h3 {
+  font-size: 1.04167vw;
+  font-family: AvenirLTStd-Heavy;
+  color: #FFFFFF;
+  margin-left: 12.03125vw;
+  margin-top: 3.28125vw;
+}
+
+.signup-form .all-form-fields h4 {
+  font-size: 1.04167vw;
+  font-family: AvenirLTStd-Heavy;
+  color: #FFFFFF;
+  margin-left: 18.28125vw;
+  margin-top: 1.19792vw;
+}
+
+.signup-form .all-form-fields button {
+  width: 14.89583vw;
+  height: 3.125vw;
+  border-radius: 2.08333vw;
+  border: 2px solid #FFFFFF;
+  font-size: 1.04167vw;
+  color: #FFFFFF;
+  background-color: #2699FB;
+  font-family: AvenirLTStd-Book;
+  margin-left: 11.45833vw;
+  margin-top: 1.82292vw;
+}
+
+.signup-form .all-form-fields button span {
+  margin-left: 6.25vw;
+}
+
+.add-a-friend-main .add-friend-heading {
+  background-color: #2699FB;
+  height: 5.20833vw;
+}
+
+.add-a-friend-main .add-friend-heading h1 {
+  font-size: 2.08333vw;
+  font-family: AvenirLTStd-Book;
+  color: #FFFFFF;
+  padding-top: 1.5625vw;
+  margin-left: 1.04167vw;
+}
+
+.add-a-friend-main .add-friend-heading h1 span {
+  font-size: 2.08333vw;
+  font-family: AvenirLTStd-Black;
+}
+
+.add-a-friend-main p {
+  font-size: 1.30208vw;
+  font-family: AvenirLTStd-Book;
+  color: #2699FB;
+  margin-left: 12.91667vw;
+}
+
+.add-a-friend-main .name-mobile-field {
+  margin-top: 9.01042vw;
+}
+
+.add-a-friend-main .name-mobile-field input {
+  width: 27.91667vw;
+  height: 3.125vw;
+  margin-bottom: 5.67708vw;
+  margin-left: 12.91667vw;
+}
+
+.add-a-friend-main .dob-game-field input {
+  width: 27.91667vw;
+  height: 3.125vw;
+  margin-left: 12.91667vw;
+}
+
+.add-a-friend-main .button-fields {
+  height: 8.38542vw;
+  margin-top: 13.95833vw;
+  background-color: #2699FB;
+}
+
+.add-a-friend-main .button-fields button {
+  width: 13.59375vw;
+  height: 3.22917vw;
+  border-radius: 1.04167vw;
+  border: 2px solid #FFFFFF;
+  background-color: #2699FB;
+  font-size: 1.04167vw;
+  font-family: AvenirLTStd-Book;
+  color: #FFFFFF;
+  margin-top: 2.08333vw;
+  margin-left: 7.23958vw;
+}
+
+.add-a-friend-main .button-fields button span {
+  margin-left: 5.20833vw;
+}
+
+.add-a-friend-main .button-fields .add-button button {
+  float: right;
+  margin-right: 7.03125vw;
+}
+
+.friendList-main .friends-List-heading {
+  background-color: #2699FB;
+  height: 5.20833vw;
+}
+
+.friendList-main .friends-List-heading h1 {
+  font-size: 2.08333vw;
+  font-family: AvenirLTStd-Book;
+  color: #FFFFFF;
+  padding-top: 1.5625vw;
+  margin-left: 1.04167vw;
+}
+
+.friendList-main .friends-List-heading h1 span {
+  font-size: 2.08333vw;
+  font-family: AvenirLTStd-Black;
+}
+
+.friendList-main .sno-name-delete-row {
+  margin-top: 4.6875vw;
+}
+
+.friendList-main .sno-name-delete-row p {
+  font-size: 1.5625vw;
+  color: #2699FB;
+  font-family: AvenirLTStd-Heavy;
+}
+
+.add-friend-button {
+  height: 8.38542vw;
+  margin-top: 13.95833vw;
+  background-color: #2699FB;
+}
+
+.add-friend-button button {
+  width: 17.03125vw;
+  height: 3.22917vw;
+  border-radius: 1.04167vw;
+  border: 2px solid #FFFFFF;
+  font-size: 1.04167vw;
+  color: #FFFFFF;
+  background-color: #2699FB;
+  font-family: AvenirLTStd-Book;
+  margin-top: 2.08333vw;
+}
+
+.add-friend-button button span {
+  margin-left: 4.16667vw;
+}
+/*# sourceMappingURL=app.css.map */

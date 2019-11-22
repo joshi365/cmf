@@ -1,21 +1,27 @@
 import React from 'react';
-import './App.css';
+import './app.css';
 import SignUp from './Components/SignUp';
 import Login from './Components/Login';
 import FriendList from './Components/FriendList';
 import AddAFriend from './Components/AddAFriend';
+import PrivateRoute from './Components/Private Route/PrivateRoute'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import WelcomePage from './Components/WelcomePage'
 
 //REDUX//
 import {Provider} from 'react-redux';
 import store from './store/store';
 
+
+
+   
 function App() {
   return (
     <Provider store ={store}>
     <Router>
-    <Switch> 
-      <Route exact path='/' component={SignUp}/>
+    <Switch>
+      <Route exact path='/' component={WelcomePage}/> 
+      <Route exact path='/signup' component={SignUp}/>
       <Route exact path='/login' component={Login}/>
       <Route exact path='/friendlist' component={FriendList}/>
       <Route exact path='/addafriend' component={AddAFriend}/>

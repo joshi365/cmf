@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {userLogin} from '../store/actions/loginAction';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 class Login extends Component {
      
@@ -28,12 +29,57 @@ class Login extends Component {
 
     render() {
         return (
-            <div className='login-main'>
-                <form onSubmit={this.onSubmitHandler}>
-                <input name='email' value={this.state.email} onChange={this.onChange} type='email' placeholder='email'></input>
-                <input name='password' value={this.state.password} onChange={this.onChange} type='password' placeholder='password'></input>
-                <button type='submit'>submit</button>
-                </form>
+            <div className='signup-form'>
+             <form onSubmit={this.onSubmitHandler}>
+
+            <div className='welcome-page-heading'>
+            <h1>Welcome To <span>Friends App</span></h1>
+            </div>
+
+            <div className='all-form-fields'>
+                <div className='login-title'>
+                   <h2>Login</h2> 
+                </div>
+                
+            <div className='name-password-field'>
+
+                <div className='row'>
+                    <div className='col'>
+                    <input
+                     name= 'email' 
+                     value={this.state.email} 
+                     onChange={this.onChange} 
+                     type='email'
+                     placeholder='Email adress'
+                     >                   
+                    </input>
+                    </div>
+                </div>
+
+                <div className='row'>
+                    <div className='col'>
+                    <input 
+                    name='password' 
+                    value={this.state.password} 
+                    onChange={this.onChange} 
+                    type='password'
+                    placeholder='Password'
+                    >
+                    </input>           
+                    </div>
+                </div>
+            
+            </div>
+
+            <div>
+                <h3>Forgot Password</h3>
+                <h4>Not a member. <Link style={{color:'white'}} to='/signup'>SignUp instead</Link></h4>
+            </div>
+
+            <button type='submit'>Login <span>-></span></button>
+        </div>
+            </form>
+                
             </div>
         )
     }
@@ -46,3 +92,13 @@ const mapStateToProps = state => ({
 export default connect (mapStateToProps,
     {userLogin}
     )(Login);
+
+
+
+//     <div className='login-main'>
+//     <form onSubmit={this.onSubmitHandler}>
+//     <input name='email' value={this.state.email} onChange={this.onChange} type='email' placeholder='email'></input>
+//     <input name='password' value={this.state.password} onChange={this.onChange} type='password' placeholder='password'></input>
+//     <button type='submit'>submit</button>
+//     </form>
+// </div>

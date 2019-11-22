@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {signUp} from '../store/actions/signUpAction';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom'
 
  class SignUp extends Component {
 
@@ -32,14 +33,53 @@ handleSubmit = (e) => {
     render() {
         return (
             <div className='signup-form'>
-
             <form onSubmit={this.handleSubmit}>
-            <div>
-            <h1>SignUp Page</h1>
+
+            <div className='welcome-page-heading'>
+            <h1>Welcome To <span>Friends App</span></h1>
             </div>
-            <input name= 'email' value={this.state.email} onChange={this.onSearchChange} type='email'></input> Enter Your email
-            <input name='password' value={this.state.password} onChange={this.onSearchChange} type='password'></input>Enter your password
-            <button type='submit'>SignUp</button>
+
+            <div className='all-form-fields'>
+                <div className='login-title'>
+                   <h2>Sign Up</h2> 
+                </div>
+                
+            <div className='name-password-field'>
+
+                <div className='row'>
+                    <div className='col'>
+                    <input
+                     name= 'email' 
+                     value={this.state.email} 
+                     onChange={this.onSearchChange} 
+                     type='email'
+                     placeholder='Email adress'
+                     >                   
+                    </input>
+                    </div>
+                </div>
+
+                <div className='row'>
+                    <div className='col'>
+                    <input 
+                    name='password' 
+                    value={this.state.password} 
+                    onChange={this.onSearchChange} 
+                    type='password'
+                    placeholder='Password'
+                    >
+                    </input>           
+                    </div>
+                </div>
+            
+            </div>
+
+            <div>
+                <h3>Already a Member.<Link style={{color:'white'}} to='/login'>Login instead</Link></h3>
+            </div>
+
+            <button type='submit'>Sign up <span>-></span></button>
+        </div>
             </form>
                 
             </div>

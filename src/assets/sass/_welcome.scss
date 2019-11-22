@@ -1,0 +1,42 @@
+
+.welcome-page-main{
+    background-color: #2699FB;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+
+
+.Welcome-header-class{
+
+    padding-top: vw(306px);
+
+    h1{
+        font-size: vw(40px);
+        font-family: AvenirLTStd-Book;
+        color: #FFFFFF;
+
+        span{
+            font-size: vw(40px);
+            font-family: AvenirLTStd-Black;
+        }
+    }
+}
+
+.route-button{
+    margin-top: vw(162px);
+    button{
+        width: vw(327px);
+        height: vw(62px);
+        border-radius: vw(20px);
+        border: 2px solid #FFFFFF;
+        font-size: vw(20px);
+        color: #FFFFFF;
+        background-color: #2699FB;
+        font-family: AvenirLTStd-Book;
+
+        span{
+            margin-left: vw(80px);
+        }
+    }
+}
+}

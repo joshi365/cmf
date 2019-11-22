@@ -1,0 +1,74 @@
+.add-a-friend-main{
+
+    .add-friend-heading{
+        background-color: #2699FB;
+        height: vw(100px);
+
+        h1{
+            font-size: vw(40px);
+            font-family: AvenirLTStd-Book;
+            color: #FFFFFF;
+            padding-top: vw(30px);
+            margin-left: vw(20px);
+    
+            span{
+                font-size: vw(40px);
+                font-family: AvenirLTStd-Black;
+            }
+    }
+    }
+    p{
+       font-size: vw(25px);
+       font-family: AvenirLTStd-Book;
+       color: #2699FB;
+       margin-left: vw(248px);
+      
+    }
+
+    .name-mobile-field{
+        margin-top: vw(173px);
+        input{
+            width: vw(536px);
+            height:vw(60px);
+            margin-bottom: vw(109px);
+             margin-left: vw(248px); 
+        }
+    }
+
+    .dob-game-field{
+        input{
+            width: vw(536px);
+            height:vw(60px);
+            margin-left: vw(248px); 
+        }
+    }
+
+    .button-fields{
+        height: vw(161px);
+        margin-top: vw(268px);
+        background-color:#2699FB ;
+        button{
+            width: vw(261px);
+            height:vw(62px);
+            border-radius: vw(20px);
+            border: 2px solid #FFFFFF;
+            background-color: #2699FB;
+            font-size: vw(20px);
+            font-family: AvenirLTStd-Book;
+            color: #FFFFFF;
+            margin-top: vw(40px);
+            margin-left: vw(139px);
+
+            span{
+                margin-left: vw(100px);
+            }
+        }
+
+        .add-button{
+            button{
+                float: right;
+                margin-right: vw(135px);
+            }
+        }
+    }
+}

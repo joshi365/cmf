@@ -1,0 +1,81 @@
+.signup-form{
+    background-color: #2699FB;
+    height: 100vh;
+
+    .welcome-page-heading{
+       padding-top: vw(48px);
+       margin-left: vw(80px);
+        h1{
+            font-size: vw(40px);
+            font-family: AvenirLTStd-Book;
+            color: #FFFFFF;
+    
+            span{
+                font-size: vw(40px);
+                font-family: AvenirLTStd-Black;
+            }
+        }
+    }
+  
+.all-form-fields {
+    text-align: center;
+
+    h2{
+        font-size: vw(30px);
+        font-family: AvenirLTStd-Book;
+        color: #FFFFFF;
+        margin-bottom: vw(42px);
+    }
+
+    ::placeholder {
+        font-family: AvenirLTStd-Heavy;
+        font-size: vw(20px);
+        color: #FFFFFF;
+        padding-left: vw(20px);
+
+    }
+
+    input {
+        width: vw(524px);
+        height: vw(76px);
+        border-radius: vw(40px);
+        background-color: #2699FB;
+        border: 2px solid #FFFFFF;
+        margin-bottom: vw(30px);
+        outline: none;
+    }
+
+    h3{
+        font-size: vw(20px);
+        font-family: AvenirLTStd-Heavy;
+        color: #FFFFFF;
+        margin-left: vw(231px);
+        margin-top: vw(63px);
+    }
+
+    h4{
+        font-size: vw(20px);
+        font-family: AvenirLTStd-Heavy;
+        color: #FFFFFF;
+        margin-left: vw(351px);
+        margin-top: vw(23px);
+    }
+    button{
+        width: vw(286px);
+        height: vw(60px);
+        border-radius: vw(40px);
+        border: 2px solid #FFFFFF;
+        font-size: vw(20px);
+        color: #FFFFFF;
+        background-color: #2699FB;
+        font-family: AvenirLTStd-Book;
+        margin-left: vw(220px);
+        margin-top: vw(35px);
+
+
+        span{
+            margin-left: vw(120px);
+        }
+    }
+}
+}

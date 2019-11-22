@@ -81,9 +81,7 @@ class FriendList extends Component {
                 <React.Fragment>
             <div className='friendList-main'>
                 <div className='friends-List-heading'>
-                <div className='joint-text'>
-                <h3>Welcome To</h3> <h2>Friends App</h2>
-                </div>
+                <h1>Welcome To<span> Friends App</span></h1>
                 </div>
         
                 <div className='container sno-name-delete-row'>
@@ -97,14 +95,13 @@ class FriendList extends Component {
               {this.renderList()}
                 </div>
 
-                <div className='add-friend-link'>
-                </div> 
+             
 
             </div>
 
           </React.Fragment>
 
-          <div><Link to ='/addafriend'><p>add a friend</p></Link></div>
+          <div className='add-friend-button'><Link to ='/addafriend'><button>Add A Friend</button></Link></div>
           
             </div>
         );
