@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {GET_PROFILE} from '../types';
 
+
 /**************************************
  * FRIEND LIST
  * ***********************************/ 
@@ -46,9 +47,26 @@ export const friendAdd = (friendData, history) =>  async dispatch => {
  export const deleteFriend = (id) => async dispatch => {
      try {
          const headers={AuthenticationToken:localStorage.getItem('token')}
-         const res= await axios.delete(`/user/myfriends/${id}`,{headers:headers})
+         const res = await axios.delete(`/user/deletefriend/${id}`,{headers:headers})
          dispatch(getCurrentProfile())
      } catch (error) {
          console.log(error);
      }
  }
+
+/********************************************************
+ * EDIT A FRIEND
+ * *******************************************************/ 
+ export const EditTheFriend = (formData,friendID,history) =>  async dispatch => {
+    try {
+        const headers={AuthenticationToken:localStorage.getItem('token')}
+        const res =  axios.patch(`/user/updatefriend/${friendID}`,formData,{headers:headers})
+        console.log(res);
+  
+        dispatch(getCurrentProfile())
+        history.push('/friendlist')
+  
+    } catch (error) {
+        console.log(error);
+    }
+  }
