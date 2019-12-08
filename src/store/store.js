@@ -1,21 +1,21 @@
 
-// Store Js File
-import { applyMiddleware, compose, createStore } from 'redux';
-import rootReducer from './reducers';
-import thunk from 'redux-thunk';
-const middleware = [thunk];
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+import rootReducer from "./reducers/index";
 
 const intialState = {};
 
-let composeEnhancers = compose(applyMiddleware(...middleware));
+const middleware = [thunk];
 
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-  composeEnhancers = compose(
-    applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  );
-}
-
-const store = createStore(rootReducer, intialState, composeEnhancers);
+const store = createStore(
+  rootReducer,
+  intialState,
+  compose(
+    applyMiddleware(...middleware)
+    // ,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+);
 
 export default store;
+
+//new file//data new remove update file

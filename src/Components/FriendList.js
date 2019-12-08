@@ -1,3 +1,4 @@
+ 
 import React, { Component } from "react";
 import { getCurrentProfile } from "../store/actions/profile";
 import { deleteFriend } from "../store/actions/profile";
@@ -125,6 +126,10 @@ class FriendList extends Component {
     );
   }
 }
+
+FriendList.propTypes = {
+  auth: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => ({
   profile: state.profile,

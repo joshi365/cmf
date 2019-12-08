@@ -8,7 +8,7 @@ import {GET_PROFILE} from '../types';
 
 export const getCurrentProfile = () => async dispatch => {
     try{
-        const headers = {AuthenticationToken:localStorage.getItem('token')}
+        const headers = {AuthenticationToken:localStorage.getItem('jwtToken')}
         const res = await axios.get('/user/myfriends',{headers:headers});
         // console.log(res);
 
@@ -28,7 +28,7 @@ export const getCurrentProfile = () => async dispatch => {
 
 export const friendAdd = (friendData, history) =>  async dispatch => {
     try {
-        const headers = {AuthenticationToken:localStorage.getItem('token')}
+        const headers = {AuthenticationToken:localStorage.getItem('jwtToken')}
         const res =  axios.post('/user/addfriend',friendData,{headers:headers})
         console.log(res);
 
@@ -46,7 +46,7 @@ export const friendAdd = (friendData, history) =>  async dispatch => {
 
  export const deleteFriend = (id) => async dispatch => {
      try {
-         const headers={AuthenticationToken:localStorage.getItem('token')}
+         const headers={AuthenticationToken:localStorage.getItem('jwtToken')}
          const res = await axios.delete(`/user/deletefriend/${id}`,{headers:headers})
          dispatch(getCurrentProfile())
      } catch (error) {
@@ -59,7 +59,7 @@ export const friendAdd = (friendData, history) =>  async dispatch => {
  * *******************************************************/ 
  export const EditTheFriend = (formData,friendID,history) =>  async dispatch => {
     try {
-        const headers={AuthenticationToken:localStorage.getItem('token')}
+        const headers={AuthenticationToken:localStorage.getItem('jwtToken')}
         const res =  axios.patch(`/user/updatefriend/${friendID}`,formData,{headers:headers})
         console.log(res);
   

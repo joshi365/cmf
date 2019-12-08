@@ -1,3 +1,4 @@
 export const LOGIN_SUCCSESS = 'LOGIN_SUCCSESS';
 export const GET_PROFILE = 'GET_PROFILE';
 export const FRIEND_EDIT = 'FRIEND_EDIT';
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
